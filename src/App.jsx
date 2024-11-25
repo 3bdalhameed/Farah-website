@@ -12,7 +12,7 @@ function App() {
                 <p>error</p>
                 <Routes>
                     <Route path="/" element={<MyTest />} />
-                    <Route path="/galary" element={<Galary />} />
+                    <Route path="/gallary" element={<Galary />} />
                 </Routes>
             </div>
         </Router>

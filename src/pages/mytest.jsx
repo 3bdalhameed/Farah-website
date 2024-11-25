@@ -18,6 +18,14 @@ function Home() {
     { src: cave, title: "Cave Wedding" },
   ];
 
+  const services = [
+    { title: "Wedding Planning", description: "Tailored solutions for your big day." },
+    { title: "Corporate Events", description: "Seamlessly organized events to impress your clients." },
+    { title: "Private Parties", description: "Create unforgettable moments for you and your guests." },
+    { title: "Venue Decoration", description: "Transform spaces into stunning event venues." },
+    { title: "Catering Services", description: "Delicious menus crafted for every occasion." },
+  ];
+
   return (
     <>
       {/* Navbar */}
@@ -39,28 +47,41 @@ function Home() {
           <div className="overlay"></div>
         </div>
         <div>
-          <img src={logo} alt="" />
+          <img src={logo} alt="Logo" />
         </div>
       </section>
 
       {/* Projects Section */}
       <section className="projects" id="projects">
-        <div className="button-container">
-          <h3 className="main-btn-proj">Our Works</h3>
+  <h2 className="section-header">Our Works</h2>
+  <div className="content">
+    {projects.map((project, index) => (
+      <div className="project-card" key={index}>
+        <div className="project-image">
+          <img src={project.src} alt={project.title} />
         </div>
-        <div className="content">
-          {projects.map((project, index) => (
-            <div className="project-card" key={index}>
-              <div className="project-image">
-                <img src={project.src} alt={project.title} />
+        <div className="project-info">
+          <strong className="project-title">
+            <span>{project.title}</span>
+          </strong>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+      {/* Services Section */}
+      <section className="services" id="services">
+        <div className="services-container">
+          <h3 className="section-title">Our Services</h3>
+          <div className="services-grid">
+            {services.map((service, index) => (
+              <div className="service-card" key={index}>
+                <h4 className="service-title">{service.title}</h4>
+                <p className="service-description">{service.description}</p>
               </div>
-              <div className="project-info">
-                <strong className="project-title">
-                  <span>{project.title}</span>
-                </strong>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
@@ -101,19 +122,24 @@ function Home() {
 
       {/* Footer */}
       <footer className="footer">
-        <p className="footer-title">
-        © <span id="about">White Events</span>
-        </p>
-        <div className="social-icons">
-          <a href="#">
-            <img src={logo} alt="facebook" />
-          </a>
-          <a href="#">
-            <img src={logo} alt="twitter" />
-          </a>
-          <a href="#">
-            <img src={logo} alt="pinterest" />
-          </a>
+        <div className="footer-content">
+          <p className="footer-title">
+            © <span id="about">White Events</span> - All Rights Reserved.
+          </p>
+          <div className="social-icons">
+            <a href="#facebook" className="social-link">
+              <i className="fa fa-facebook"></i>
+            </a>
+            <a href="#twitter" className="social-link">
+              <i className="fa fa-twitter"></i>
+            </a>
+            <a href="#pinterest" className="social-link">
+              <i className="fa fa-pinterest"></i>
+            </a>
+            <a href="#instagram" className="social-link">
+              <i className="fa fa-instagram"></i>
+            </a>
+          </div>
         </div>
       </footer>
     </>
