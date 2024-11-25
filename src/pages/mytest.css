@@ -1,0 +1,301 @@
+  body {
+    background-color: #f8f9fa;
+  }
+  .main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Ensure the parent div fills the container (adjust as needed) */
+  } 
+
+  .main div img {
+    position: relative;
+    padding: 2vw;
+    width: 40vw;
+    height: 15vw;
+    z-index: 11;
+  }
+  
+  .video-container {
+    position: absolute;
+    width: 100%;
+    height: 100vh; /* Make it full screen */
+    overflow: hidden; /* Ensure no overflow */
+    right: 0;
+    top: 0;
+}
+
+.main-vid {
+    position: absolute;
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    z-index: -1; /* Keep it behind the overlay */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(47, 47, 47, 0.5); /* Gray with 50% transparency */
+    z-index: 1; /* Layer above the video */
+    pointer-events: none; /* Ensure it's not interactive */
+}
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; /* Adjust the height as needed */
+  }
+  
+  .main-btn-proj {
+    color: #000000;
+    background-color: #ffffff;
+    text-decoration: none;
+    font-size: 2vw; /* Adjust font size */
+    font-weight: 700; /* Adjust font weight */
+    display: inline-block;
+    padding: 1vw 2vw; /* Adjust padding */
+    letter-spacing: 1px;
+    border: 3px solid #ffffff; /* Adjust border size and color */
+    border-radius: 15px;
+    margin-bottom: 40px;
+    transition: 0.7s ease;
+  }
+  .projects {
+    background-color: #ffffff; /* Clean white background */
+    position: relative;
+    right: 1vw;
+    width: 103%;
+    top: -2.6vw;
+    height: auto; /* Adjust height dynamically based on content */
+    display: flex;
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    border-top: 3px solid #f4f4f4; /* Optional: add a subtle border at the top */
+    box-shadow: 0px -1px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow for separation */
+}  
+
+.projects .content .project-card {
+    flex: 1 1 calc(25% - 20px); /* Ensure 4 cards fit in a row with gap */
+    max-width: calc(25% - 20px); /* Prevent exceeding 4 per row */
+    background-color: #dedede; /* Light gray background for cards */
+    color: #ffffff; /* Dark text for contrast */
+    padding: 20px; /* Add padding inside the cards */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center text inside the cards */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    overflow: hidden;
+}
+  
+
+
+.projects .content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Allow items to wrap to new rows */
+    gap: 20px; /* Add spacing between items */
+    margin-top: 3vw;
+    padding: 3vw 5vw;
+}
+
+
+
+.projects .content .project-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Rounded edges for images */
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+
+.project-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 10px;
+    color: #000000; /* Dark text color for titles */
+}
+
+.project-title a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .projects .content .project-card {
+        flex: 1 1 100%; /* Make cards stack in a single column */
+        max-width: 100%;
+    }
+}
+
+  .more-details {
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  .more-details:hover {
+    color: #601cfc;
+  }
+  .appointment {
+    background-color: #f8f9fa;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    top: -2.6vw;
+    left: -1vw;
+    width: 103%;
+    height: 35vw;
+  }
+  
+  .appointment-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .appointment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .form-group label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form-group textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .submit-btn {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #333;
+  }
+  
+
+  
+  .footer {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.2em;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 20vw;
+  }
+  
+  .footer-title {
+    font-size: 1.3em;
+    font-weight: 600;
+  }
+  
+  .footer-title span {
+    color: #ffffff;
+  }
+  
+  .footer .social-icons a{
+    font-size: 1.3em;
+    padding: 0 12px 0 0;
+  }
+  .footer .social-icons a img{
+    width: 25px;
+  }
+
+  
+  @media (max-width:1023px){
+  
+    .title{
+        font-size: 1.8em;
+    }
+  
+    section{
+        padding: 80px 20px;
+    }
+  
+    .main-content h2{
+        font-size: 1em;
+    }
+  
+    .main-content h3{
+        font-size: 1.6em;
+    }
+  
+    .content{
+        flex-direction: column;
+        align-items: center;
+    }
+  
+  }
+  
+  @media (max-width:641px){
+    body{
+        font-size: 12px;
+    }
+  
+    .main-content h2{
+        font-size: 0.8em;
+    }
+  
+    .main-content h3{
+        font-size: 1.4em;
+    }
+  }
+  
+  @media (max-width:300px){
+    body{
+        font-size: 20px;
+    }
+  }
