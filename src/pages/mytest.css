@@ -4,8 +4,6 @@
   .main {
     width: 100%;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -165,31 +163,32 @@
   .more-details:hover {
     color: #601cfc;
   }
-  /* Services Section */
+/* Services Section */
 .services {
-  padding: 50px 20px;
+  padding: 20px 10px;
   background-color: #f9f9f9;
   text-align: center;
-  height: 25vw;
   position: relative;
   top: -2.4vw;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .services-container {
-  max-width: 1200px;
+  max-width: 90%;
   margin: 0 auto;
 }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
 }
 
 .service-card {
   background: white;
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
@@ -200,98 +199,88 @@
 }
 
 .service-title {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #34495e;
   margin-bottom: 10px;
 }
 
 .service-description {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #7f8c8d;
 }
 
-
-  .appointment {
-    background-color: #ffffff;
-    padding: 50px 20px;
-    text-align: center;
-    position: relative;
-    top: -2.6vw;
-    left: -1vw;
-    width: 103%;
-    height: 35vw;
-  }
-  
-  .appointment-container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .section-title {
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-weight: bold;
-    color: #333;
+/* Appointment Section */
+.appointment {
+  background-color: #ffffff;
+  padding: 30px 15px;
+  text-align: center;
+  position: relative;
+  top: -2.6vw;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-  
-  .appointment-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-  }
-  
-  .form-group label {
-    font-size: 1rem;
-    margin-bottom: 5px;
-    color: #555;
-  }
-  
-  .form-group input,
-  .form-group textarea {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .form-group textarea {
-    resize: none;
-    height: 100px;
-  }
-  
-  .submit-btn {
-    padding: 10px 20px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .submit-btn:hover {
-    background-color: #333;
-  }
-  
+.appointment-container {
+  max-width: 90%;
+  margin: 0 auto;
+}
 
-  
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 80px;
+}
+
+.submit-btn {
+  padding: 10px 15px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #333;
+}
+
 /* Footer */
 .footer {
   background: #000000;
   color: white;
-  padding: 20px;
+  padding: 15px 10px;
   text-align: center;
 }
 
 .footer-title {
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 10px;
 }
 
@@ -303,7 +292,7 @@
 
 .social-link {
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   transition: color 0.3s ease;
 }
 
@@ -311,47 +300,36 @@
   color: #3498db;
 }
 
-  @media (max-width:1023px){
-  
-    .title{
-        font-size: 1.8em;
-    }
-  
-    section{
-        padding: 80px 20px;
-    }
-  
-    .main-content h2{
-        font-size: 1em;
-    }
-  
-    .main-content h3{
-        font-size: 1.6em;
-    }
-  
-    .content{
-        flex-direction: column;
-        align-items: center;
-    }
-  
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .service-title {
+    font-size: 1rem;
   }
-  
-  @media (max-width:641px){
-    body{
-        font-size: 12px;
-    }
-  
-    .main-content h2{
-        font-size: 0.8em;
-    }
-  
-    .main-content h3{
-        font-size: 1.4em;
-    }
+
+  .service-description {
+    font-size: 0.8rem;
   }
-  
-  @media (max-width:300px){
-    body{
-        font-size: 20px;
-    }
+
+  .appointment {
+    padding: 20px 10px;
   }
+}
+
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* Single column for very small screens */
+  }
+
+  .service-card {
+    width: 100%; /* Full width for cards on small screens */
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.8rem;
+  }
+
+  .submit-btn {
+    font-size: 0.9rem;
+  }
+}
