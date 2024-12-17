@@ -1,64 +1,50 @@
-import React, { useState } from 'react';
-import { FaCog, FaBell, FaFlag, FaUser, FaUsers, FaGavel, FaChartBar } from 'react-icons/fa';
+import React, { useState, useEffect } from 'react';
 import './navbar.css';
-import logo from "../../pages/newimg/logo1.png";
-import { checkAuthentication } from './auth';
+import logo from '../../pages/newimg/logo1.png';
 import { useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
-  const [isMenuOpen, setMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const navigate = useNavigate();
 
-  const toggleMenu = () => {
-    setMenuOpen(!isMenuOpen);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
 
-  const handleAuthRedirect = async (path) => {
-    const isAuthenticated = await checkAuthentication();
-    if (isAuthenticated) {
-        navigate(path);
-    } else {
-        navigate("/login");
-    }
-  };
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <nav className="navbar">
-      <a href="/">
-        <img src={logo} alt="logo" />
-      </a>
-      <div className="burger-menu" onClick={toggleMenu}>
-        ☰
+    <>
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+      <div className="nav-items-left">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
       </div>
 
-      <ul className={`nav-items ${isMenuOpen ? 'show' : ''}`}>
-        <li className="nav-item">
-          <a href="#about">
-          <span>About</span>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a href="Scorevoard">
-            <span>Services</span>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a href="galary">
-            <span>Gallery</span>
-          </a>
-        </li>
-        <li className="nav-item">
-          <a href="Notifications">
-            <span>Testimonials</span>
-          </a>
-        </li>
-        <li className="nav-item dropdown">
-          <a href='#appointment'>
-            <span>Book an appointment</span>
-            </a>
-        </li>
-      </ul>
+      
+
+
+      <div className="nav-items-right">
+        <a href="#gallery">Gallery</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#appointment">Book</a>
+      </div>
     </nav>
+    <div className={`logo-container ${isScrolled ? 'logo-scrolled' : ''}`}>
+          <img src={logo} alt="Logo" />
+      </div>
+    </>
   );
 };
 

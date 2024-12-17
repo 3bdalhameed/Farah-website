@@ -1,6 +1,5 @@
 import React from "react";
 import "./mytest.css";
-import logo from "./newimg/logo1.png";
 import cave from "./newimg/s1.jpg";
 import Navbar from "../components/Navbar1/navbar";
 import background from "./newimg/background.mp4";
@@ -9,14 +8,7 @@ import galaxy from "./newimg/s3.jpg";
 import emaar from "./newimg/w4.jpg";
 
 function Home() {
-  const projects = [
-    { src: school, title: "New English School" },
-    { src: galaxy, title: "Galaxy Party" },
-    { src: cave, title: "Cave Wedding" },
-    { src: emaar, title: "Burj Khalifa" },
-    { src: galaxy, title: "Galaxy Party" },
-    { src: cave, title: "Cave Wedding" },
-  ];
+
 
   const services = [
     { title: "Wedding Planning", description: "Tailored solutions for your big day." },
@@ -46,44 +38,127 @@ function Home() {
           ></video>
           <div className="overlay"></div>
         </div>
-        <div>
-          <img src={logo} alt="Logo" />
-        </div>
       </section>
 
-      {/* Projects Section */}
-      <section className="projects" id="projects">
-  <h2 className="section-header">Our Works</h2>
-  <div className="content">
-    {projects.map((project, index) => (
-      <div className="project-card" key={index}>
-        <div className="project-image">
-          <img src={project.src} alt={project.title} />
-        </div>
-        <div className="project-info">
-          <strong className="project-title">
-            <span>{project.title}</span>
-          </strong>
-        </div>
-      </div>
-    ))}
+{/* Projects Section */}
+<section className="projects" id="projects">
+  {/* Overlay Text */}
+  <div className="overlayP">
+    <p>
+      FROM THE BOTTOM OF OUR HEARTS THANK YOU FOR<br />
+      CREATING THE WEDDING OF OUR DREAMS AND MAKING IT<br />
+      SUCH A MEMORABLE DAY FOR US.<br />
+      <strong>DEMI & MARKO</strong>
+    </p>
+  </div>
+  <div className="projects-container">
+    {/* Image Section */}
+    <div className="image-section">
+      <img src={galaxy} alt="Wedding Event" />
+    </div>
+    {/* Right Side: Text Content */}
+    <div className="text-section">
+      <h2>CREATORS OF EXCEPTIONAL EVENTS</h2>
+      <p>
+        White Events is a creative event design and management studio, based in Perth and
+        available for weddings and events throughout Western Australia.
+      </p>
+      <p>
+        Established in 2005, White Events has earned a reputation as Western Australia's
+        leading wedding planning studio, led by industry expert,{" "}
+        <a href="#">Lara White</a>.
+      </p>
+      <a href="#" className="btn-view">
+        VIEW OUR SERVICES
+      </a>
+    </div>
   </div>
 </section>
 
-      {/* Services Section */}
-      <section className="services" id="services">
-        <div className="services-container">
-          <h3 className="section-title">Our Services</h3>
-          <div className="services-grid">
-            {services.map((service, index) => (
-              <div className="service-card" key={index}>
-                <h4 className="service-title">{service.title}</h4>
-                <p className="service-description">{service.description}</p>
-              </div>
-            ))}
+<section className="portfolio">
+      <div className="portfolio-header">
+        <h2>OUR PORTFOLIO</h2>
+        <p>
+          Specialising in blank-canvas weddings, our style is best described as classic with a modern edge,
+          and we pride ourselves on the versatility of the events we design, ensuring no two weddings will ever look the same.
+        </p>
+        <a href="#work" className="portfolio-link">VIEW OUR WORK</a>
+      </div>
+
+      <div className="portfolio-gallery">
+        {/* First Image */}
+        <div className="gallery-item">
+          <img src="https://via.placeholder.com/400x600" alt="Wedding Flowers" />
+          <div className="overlay">
+            <div className="overlay-text">
+              <p>TAYLA & CHRIS</p>
+              <a href="#view">VIEW MORE</a>
+            </div>
           </div>
         </div>
-      </section>
+
+        {/* Second Image */}
+        <div className="gallery-item">
+          <img src="https://via.placeholder.com/400x600" alt="Wedding Couple" />
+          <div className="overlay">
+            <div className="overlay-text">
+              <p>TAYLA & CHRIS</p>
+              <a href="#view">VIEW MORE</a>
+            </div>
+          </div>
+        </div>
+
+        {/* Third Image */}
+        <div className="gallery-item">
+          <img src="https://via.placeholder.com/400x600" alt="Wedding Bouquet" />
+          <div className="overlay">
+            <div className="overlay-text">
+              <p>TAYLA & CHRIS</p>
+              <a href="#view">VIEW MORE</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+      {/* Services Section */}
+      <section className="services-section">
+      <div className="services-content">
+        {/* Left Image */}
+        <div className="services-image">
+          <img
+            src="https://via.placeholder.com/500x700" /* Replace with actual left image URL */
+            alt="Bride and Groom Holding Hands"
+          />
+        </div>
+
+        {/* Text Content */}
+        <div className="services-text">
+          <h2>OUR SERVICES</h2>
+          <p>
+            As a specialised event design studio we offer a selection of wedding planning,
+            styling & management services, designed to suit the couples that still want to be a
+            little hands on, and those that just want to leave it all in the hands of the experts.
+          </p>
+          <div className="services-buttons">
+            <button className="btn-services">Styling</button>
+            <button className="btn-services">Styling & Management</button>
+            <button className="btn-services">Planning, Styling & Management</button>
+            <button className="btn-services">Destination Weddings</button>
+            <button className="btn-services">Private & Social Events</button>
+          </div>
+        </div>
+
+        {/* Right Image */}
+        <div className="services-image">
+          <img
+            src="https://via.placeholder.com/500x700" /* Replace with actual right image URL */
+            alt="Elegant Wedding Table Setup"
+          />
+        </div>
+      </div>
+    </section>
 
       {/* Appointment Section */}
       <section className="appointment" id="appointment">

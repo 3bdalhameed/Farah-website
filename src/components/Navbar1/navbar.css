@@ -1,103 +1,104 @@
-/* src/components/navbar.css */
-
+/* Navbar base styles */
 .navbar {
-    background-color: #000000;
-    padding: 1rem 2rem;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Add space between logo and nav items */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #000;
     position: fixed;
-    z-index: 1000;
     top: 0;
-    right: 0;
-}
-.navbar img{
-    width: 5vw;
-    height: 2vw;
-    position: relative;
-    left: 5vw;
-}
-
-.nav-items {
-    font-size: 1vw;
-    display: flex;
-    list-style-type: none;
-    gap: 2rem;
-    padding: 0;
-    margin: 0 2.5vw 0 0;
-}
-
-.nav-item {
+    left: 0;
+    width: 97%;
+    height: 3vw;
     display: flex;
     align-items: center;
-    color: #b0b3b8;
-    font-size: 1em;
-    cursor: pointer;
-    position: relative;
-    transition: color 0.3s ease;
-}
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    transition: all 0.5s ease;
+    z-index: 1000;
+  }
+  
 
-.nav-item a {
+  
+  /* Nav items on the left and right */
+  .nav-items-left,
+  .nav-items-right {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-items-left a,
+  .nav-items-right a {
+    color: #fff;
     text-decoration: none;
-    color: #ffffff;
-}
+    font-size: 1em;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-items-left a:hover,
+  .nav-items-right a:hover {
+    color: #b0b3b8;
+  }
 
-.nav-item:hover {
-    color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-}
+/* Logo container styles */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%; /* Center vertically relative to the page height */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust to center the container itself */
+    transition: transform 0.5s ease, opacity 0.5s ease, top 0.5s ease;
+    z-index: 10; /* Ensure it's above other content */
+  }
+  
+  
+  
+  .logo-container img {
+    width: 48vw; /* Large size for center logo */
+    height: auto;
 
-.nav-icon {
-    font-size: 1.2em;
-    margin-right: 0.5rem;
-}
-
-/* Burger menu icon */
-.burger-menu {
-    display: none; /* Hidden by default */
-    font-size: 1.5em;
-    cursor: pointer;
-    color: #ffffff;
-}
-
-/* Responsive styling for smaller screens */
-@media (max-width: 1023px) {
-   
-    .nav-items {
-        display: none; /* Hide the nav items on small screens */
-        flex-direction: column;
-        position: absolute;
-        top: 100%; /* Position under the navbar */
-        right: 0;
-        background-color: #000000;
-        padding: 1rem 0;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        width: 95vw;
-        font-size: medium;
-        justify-content: center; /* Center items horizontally */
-        align-items: center; /* Center items vertically */
+    transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease;
+  }
+  
+  /* When scrolled: Move the logo to the navbar */
+  .logo-container.logo-scrolled {
+    position: fixed;
+    top: 0.5vw; /* Move to the top center of the navbar */
+    left: 50%;
+    transform: translate(-50%, 0); /* Keep horizontally centered */
+    width: 5vw; /* Adjust width to fit the navbar */
+    z-index: 1003;
+  }
+  
+  .logo-container.logo-scrolled img {
+    width: 10vw; /* Small size for navbar */
+    height: auto;
+    transform: scale(1); /* Ensure it maintains original proportions */
+  }
+  
+  
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .nav-items-left,
+    .nav-items-right {
+      display: none;
     }
-
+  
     .burger-menu {
-        display: flex; /* Show burger icon on small screens */
+      display: flex;
+      font-size: 1.5em;
+      cursor: pointer;
+      color: #fff;
     }
-
+  
     .nav-items.show {
-        display: flex; /* Show nav items when burger is clicked */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #000;
+      padding: 1rem;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 100%;
     }
-}
-@media (mad-width: 768px) {
-    .navbar {
-        background-color: #1a2236;
-        padding: 1rem 2rem;
-        width: 100%;
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-}
+  }
+  
