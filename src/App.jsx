@@ -9,7 +9,6 @@ function App() {
     return (
         <Router>
             <div>
-                <p>error</p>
                 <Routes>
                     <Route path="/" element={<MyTest />} />
                     <Route path="/gallery" element={<Galary />} />

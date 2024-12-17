@@ -6,6 +6,7 @@ import background from "./newimg/background.mp4";
 import school from "./newimg/s4.jpg";
 import galaxy from "./newimg/s3.jpg";
 import emaar from "./newimg/w4.jpg";
+import logo from "./newimg/logo1.png";
 
 function Home() {
 
@@ -128,7 +129,7 @@ function Home() {
         {/* Left Image */}
         <div className="services-image">
           <img
-            src="https://via.placeholder.com/500x700" /* Replace with actual left image URL */
+            src="https://via.placeholder.com/500x800" /* Replace with actual left image URL */
             alt="Bride and Groom Holding Hands"
           />
         </div>
@@ -153,9 +154,36 @@ function Home() {
         {/* Right Image */}
         <div className="services-image">
           <img
-            src="https://via.placeholder.com/500x700" /* Replace with actual right image URL */
+            src="https://via.placeholder.com/500x800" /* Replace with actual right image URL */
             alt="Elegant Wedding Table Setup"
           />
+        </div>
+      </div>
+    </section>
+
+
+    {/* Feadback */}
+    <section className="testimonial-section">
+      <div className="testimonial-container">
+        {/* Left Arrow */}
+        <div className="testimonial-arrow left-arrow">
+          <span>&larr;</span>
+        </div>
+
+        {/* Testimonial Content */}
+        <div className="testimonial-content">
+          <p className="testimonial-text">
+            From the minute we first spoke to Lara, she put both of us at ease - which was hard
+            to do given we were planning a Perth wedding from Melbourne! Lara brought our
+            vision to life (and made it even better) and was so great to have as a support during
+            the day. Her eye for detail and elegant taste is exactly what makes her one of the best!
+          </p>
+          <p className="testimonial-author">Melanie & Nick</p>
+        </div>
+
+        {/* Right Arrow */}
+        <div className="testimonial-arrow right-arrow">
+          <span>&rarr;</span>
         </div>
       </div>
     </section>
@@ -195,28 +223,63 @@ function Home() {
         </div>
       </section>
 
+      
+      
+      {/* Top Section with Images */}
+
+      <section className="footer-gallery">
+        <div className="footer-image">
+          <img src="/images/image1.png" alt="Gallery 1" />
+          <span className="play-icon">&#9654;</span>
+        </div>
+        <div className="footer-image">
+          <img src="/images/image2.png" alt="Gallery 2" />
+          <span className="play-icon">&#9654;</span>
+        </div>
+        <div className="footer-image">
+          <img src="/images/image3.png" alt="Gallery 3" />
+          <span className="play-icon">&#9654;</span>
+        </div>
+        <div className="footer-image">
+          <img src="/images/image4.png" alt="Gallery 4" />
+          <span className="play-icon">&#9654;</span>
+        </div>
+      </section>
       {/* Footer */}
       <footer className="footer">
-        <div className="footer-content">
-          <p className="footer-title">
-            © <span id="about">White Events</span> - All Rights Reserved.
-          </p>
-          <div className="social-icons">
-            <a href="#facebook" className="social-link">
-              <i className="fa fa-facebook"></i>
-            </a>
-            <a href="#twitter" className="social-link">
-              <i className="fa fa-twitter"></i>
-            </a>
-            <a href="#pinterest" className="social-link">
-              <i className="fa fa-pinterest"></i>
-            </a>
-            <a href="#instagram" className="social-link">
-              <i className="fa fa-instagram"></i>
-            </a>
-          </div>
+      {/* Bottom Section */}
+      <div className="footer-content">
+        <div className="footer-contact">
+          <h3>CONTACT DETAILS</h3>
+          <p>1st Floor, 142 Northwood St, West Leederville</p>
+          <p>(by appointment)</p>
+          <p>PO Box 101, Mount Hawthorn WA 6915</p>
+          <p><a href="mailto:lara@whiteevents.com.au">farah@whiteevents.com.au</a></p>
+          <p>0414 184 341</p>
         </div>
-      </footer>
+
+        <div className="footer-logo">
+          <img src={logo}></img>
+        </div>
+
+        <div className="footer-menu">
+          <h3>MENU</h3>
+          <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#gallery">GALLERY</a></li>
+            <li><a href="#testimonials">TESTIMONIALS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Footer Bottom */}
+      <div className="footer-bottom">
+        <p>© White Events | Designed by Jessica M. Studio</p>
+      </div>
+    </footer>
     </>
   );
 }
