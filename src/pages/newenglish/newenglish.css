@@ -5,7 +5,7 @@
   border: 1px solid rgba(214, 219, 223, 0.5); /* Subtle border */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds depth */
   border-radius: 10px; /* Smooth edges */
-  margin-top: 20px;
+  margin-top: 7vw;
   padding: 30px 20px; /* Adds spacing inside the jumbotron */
   text-align: center; /* Centers the content */
   max-width: 800px; /* Limits the width */

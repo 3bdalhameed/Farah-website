@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../../components/Navbar1/navbar";
+import Navbar from "../../components/Navbar/navbar";
 import "./newenglish.css";
 import m1 from "./img/1.jpg";
 import m2 from "./img/2.jpg";

@@ -6,9 +6,8 @@
     text-align: center;
     position: relative;
     top: -2.6vw;
-    width: 102%;
-    position: relative;
-    left: -1vw;
+    width: 100%;
+    left: 0;
     box-sizing: border-box;
   }
   
