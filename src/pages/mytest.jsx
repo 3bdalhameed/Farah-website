@@ -1,5 +1,4 @@
 import React from "react";
-import "./mytest.css";
 import Navbar from "../components/Navbar1/navbar";
 import Main from "../components/Main/main";
 import Project from "../components/Project/project";

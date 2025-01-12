@@ -1,45 +1,61 @@
 import React from "react";
-import "./services.css";
-import background from "../../pages/newimg/background.mp4";
+import m1 from "../../pages/newenglish/img/15.jpg";
 
-function Services(){
-return(
-          <section className="services-section">
-          <div className="services-content">
-            {/* Left Image */}
-            <div className="services-image">
-              <img
-                src="https://via.placeholder.com/500x800" /* Replace with actual left image URL */
-                alt="Bride and Groom Holding Hands"
-              />
-            </div>
-    
-            {/* Text Content */}
-            <div className="services-text">
-              <h2>OUR SERVICES</h2>
-              <p>
-                As a specialised event design studio we offer a selection of wedding planning,
-                styling & management services, designed to suit the couples that still want to be a
-                little hands on, and those that just want to leave it all in the hands of the experts.
-              </p>
-              <div className="services-buttons">
-                <button className="btn-services">Styling</button>
-                <button className="btn-services">Styling & Management</button>
-                <button className="btn-services">Planning, Styling & Management</button>
-                <button className="btn-services">Destination Weddings</button>
-                <button className="btn-services">Private & Social Events</button>
-              </div>
-            </div>
-    
-            {/* Right Image */}
-            <div className="services-image">
-              <img
-                src="https://via.placeholder.com/500x800" /* Replace with actual right image URL */
-                alt="Elegant Wedding Table Setup"
-              />
-            </div>
+
+function Services() {
+  return (
+    <section className="py-16 bg-white flex justify-center items-center">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
+        {/* Left Image */}
+        <div className="w-full">
+          <img
+            src={m1} /* Replace with actual left image URL */
+            alt="Bride and Groom Holding Hands"
+            className="w-full h-auto rounded-lg object-cover"
+          />
+        </div>
+
+        {/* Text Content */}
+        <div className="text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+            OUR SERVICES
+          </h2>
+          <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6">
+            As a specialised event design studio we offer a selection of wedding
+            planning, styling & management services, designed to suit the
+            couples that still want to be a little hands on, and those that just
+            want to leave it all in the hands of the experts.
+          </p>
+          <div className="flex flex-col gap-4 mt-6">
+            <button className="bg-transparent text-gray-800 border border-gray-300 rounded-full px-6 py-3 font-medium text-sm md:text-base uppercase transition-transform duration-300 hover:bg-gray-800 hover:text-white">
+              Styling
+            </button>
+            <button className="bg-transparent text-gray-800 border border-gray-300 rounded-full px-6 py-3 font-medium text-sm md:text-base uppercase transition-transform duration-300 hover:bg-gray-800 hover:text-white">
+              Styling & Management
+            </button>
+            <button className="bg-transparent text-gray-800 border border-gray-300 rounded-full px-6 py-3 font-medium text-sm md:text-base uppercase transition-transform duration-300 hover:bg-gray-800 hover:text-white">
+              Planning, Styling & Management
+            </button>
+            <button className="bg-transparent text-gray-800 border border-gray-300 rounded-full px-6 py-3 font-medium text-sm md:text-base uppercase transition-transform duration-300 hover:bg-gray-800 hover:text-white">
+              Destination Weddings
+            </button>
+            <button className="bg-transparent text-gray-800 border border-gray-300 rounded-full px-6 py-3 font-medium text-sm md:text-base uppercase transition-transform duration-300 hover:bg-gray-800 hover:text-white">
+              Private & Social Events
+            </button>
           </div>
-        </section>
-);
+        </div>
+
+        {/* Right Image */}
+        <div className="w-full">
+          <img
+            src={m1}
+            alt="Elegant Wedding Table Setup"
+            className="w-full h-auto rounded-lg object-cover"
+          />
+        </div>
+      </div>
+    </section>
+  );
 }
+
 export default Services;

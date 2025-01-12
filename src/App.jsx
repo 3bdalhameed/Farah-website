@@ -3,6 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MyTest from "./pages/mytest";
 import Galary from "./pages/newenglish/newenglish";
+import "./App.css";
 
 
 function App() {
