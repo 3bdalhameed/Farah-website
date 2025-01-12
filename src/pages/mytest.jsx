@@ -4,7 +4,7 @@ import Main from "../components/Main/main";
 import Project from "../components/Project/project";
 import Portfolio from "../components/Portfolio/Portfolio";
 import Services from "../components/Services/services";
-import Feadback from "../components/Feadback/feadback";
+import Feadback from "../components/Feedback/feedback";
 import Appointment from "../components/Appointment/appointment";
 import Footer from "../components/Footer/footer";
 

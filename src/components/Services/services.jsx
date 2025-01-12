@@ -27,19 +27,19 @@ function Services() {
             want to leave it all in the hands of the experts.
           </p>
           <div className="flex flex-col gap-4 mt-6">
-            <button className="bg-transparent text-gray-800 border border-gray-300 rounded-full px-6 py-3 font-medium text-sm md:text-base uppercase transition-transform duration-300 hover:bg-gray-800 hover:text-white">
+            <button className="bg-transparent text-gray-800 border border-gray-300 px-6 py-3 font-medium text-sm md:text-base uppercase transition-transform duration-300 hover:bg-gray-800 hover:text-white">
               Styling
             </button>
-            <button className="bg-transparent text-gray-800 border border-gray-300 rounded-full px-6 py-3 font-medium text-sm md:text-base uppercase transition-transform duration-300 hover:bg-gray-800 hover:text-white">
+            <button className="bg-transparent text-gray-800 border border-gray-300 px-6 py-3 font-medium text-sm md:text-base uppercase transition-transform duration-300 hover:bg-gray-800 hover:text-white">
               Styling & Management
             </button>
-            <button className="bg-transparent text-gray-800 border border-gray-300 rounded-full px-6 py-3 font-medium text-sm md:text-base uppercase transition-transform duration-300 hover:bg-gray-800 hover:text-white">
+            <button className="bg-transparent text-gray-800 border-b border-l border-gray-700 px-6 py-3 font-medium text-sm md:text-base uppercase transition duration-500 hover:bg-black hover:text-white">
               Planning, Styling & Management
             </button>
-            <button className="bg-transparent text-gray-800 border border-gray-300 rounded-full px-6 py-3 font-medium text-sm md:text-base uppercase transition-transform duration-300 hover:bg-gray-800 hover:text-white">
+            <button className="bg-transparent text-gray-800 border border-gray-300 px-6 py-3 font-medium text-sm md:text-base uppercase transition-transform duration-300 hover:bg-gray-800 hover:text-white">
               Destination Weddings
             </button>
-            <button className="bg-transparent text-gray-800 border border-gray-300 rounded-full px-6 py-3 font-medium text-sm md:text-base uppercase transition-transform duration-300 hover:bg-gray-800 hover:text-white">
+            <button className="bg-transparent text-gray-800 border border-gray-300 px-6 py-3 font-medium text-sm md:text-base uppercase transition-transform duration-300 hover:bg-gray-800 hover:text-white">
               Private & Social Events
             </button>
           </div>

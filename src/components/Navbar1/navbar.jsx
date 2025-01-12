@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for small screen menu toggle
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -21,12 +22,22 @@ const NavBar = () => {
     <>
       {/* Navbar */}
       <nav
-        className={`fixed top-0 left-0 w-full flex items-center justify-between px-24 py-6 transition-all duration-500 z-50 ${
+        className={`fixed top-0 left-0 w-full flex items-center justify-between px-6 md:px-24 py-4 md:py-6 transition-all duration-500 z-50 ${
           isScrolled ? "bg-black shadow-lg" : "bg-transparent"
         }`}
       >
+        {/* Hamburger Menu (Small Screens) */}
+        <div className="md:hidden">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-white text-2xl focus:outline-none"
+          >
+            {isMenuOpen ? "✖" : "☰"}
+          </button>
+        </div>
+
         {/* Left Navigation */}
-        <div className="flex gap-8 text-white">
+        <div className="hidden md:flex gap-8 text-white">
           <a href="#home" className="hover:text-gray-400 transition">
             Home
           </a>
@@ -39,7 +50,7 @@ const NavBar = () => {
         </div>
 
         {/* Right Navigation */}
-        <div className="flex gap-8 text-white">
+        <div className="hidden md:flex gap-8 text-white">
           <a href="#gallery" className="hover:text-gray-400 transition">
             Gallery
           </a>
@@ -52,6 +63,54 @@ const NavBar = () => {
         </div>
       </nav>
 
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="absolute top-14 left-0 w-full bg-black text-white flex flex-col items-center py-4 z-40 md:hidden">
+          <a
+            href="#home"
+            className="py-2 hover:text-gray-400 transition"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Home
+          </a>
+          <a
+            href="#about"
+            className="py-2 hover:text-gray-400 transition"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            About
+          </a>
+          <a
+            href="#services"
+            className="py-2 hover:text-gray-400 transition"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Services
+          </a>
+          <a
+            href="#gallery"
+            className="py-2 hover:text-gray-400 transition"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Gallery
+          </a>
+          <a
+            href="#testimonials"
+            className="py-2 hover:text-gray-400 transition"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Testimonials
+          </a>
+          <a
+            href="#appointment"
+            className="py-2 hover:text-gray-400 transition"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Book
+          </a>
+        </div>
+      )}
+
       {/* Logo */}
       <div
         className={`fixed transition-all duration-500 transform z-50 ${
@@ -60,11 +119,7 @@ const NavBar = () => {
             : "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2" // Large centered logo
         }`}
       >
-        <img
-          src={logo}
-          alt="Logo"
-          className="w-full h-auto "
-        />
+        <img src={logo} alt="Logo" className="w-full h-auto" />
       </div>
     </>
   );

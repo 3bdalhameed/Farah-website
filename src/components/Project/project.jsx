@@ -5,7 +5,7 @@ function Project() {
   return (
     <section
       id="projects"
-      className="relative bg-white py-20 flex flex-col items-center justify-center">
+      className="relative bg-white py-24 flex flex-col items-center justify-center">
       {/* Overlay Text */}
       <div className="w-11/12 md:w-3/5 text-center bg-white p-8 font-serif text-gray-800 text-lg leading-relaxed shadow-md mb-12">
         <p>
@@ -24,11 +24,11 @@ function Project() {
         <img
           src={galaxy}
           alt="Wedding Event"
-          className="w-4/6  object-cover opacity-80 top-20"
+          className="w-4/6 h-full object-cover opacity-80 top-20"
         />
       </div>
 
-<div className="w-full flex-1 bg-gray-100 p-24 top-14 left-96 text-center shadow-lg max-w-4xl lg:ml-auto lg:mr-0 mx-auto lg:mt-0 lg:mb-0 lg:relative lg:right-0">
+<div className="w-full flex-1 bg-gray-100 p-24 top-10 left-96 text-center shadow-lg max-w-4xl lg:ml-auto lg:mr-0 mx-auto lg:mt-0 lg:mb-0 lg:relative lg:right-0">
   <h2 className="font-serif text-2xl lg:text-3xl font-bold text-gray-800 mb-6 leading-snug">
     CREATORS OF EXCEPTIONAL EVENTS
   </h2>
@@ -44,8 +44,8 @@ function Project() {
   </p>
   <a href="#buttons-with-link">
   <button
-    class="border-b border-slate-400 py-6 px-6 text-center text-sm transition-all shadow-sm hover:shadow-lg text-slate-600 hover:text-white hover:bg-slate-800 hover:border-b-slate-800 focus:text-white focus:bg-slate-800 focus:border-b-slate-800 active:border-b-slate-800 active:text-white active:bg-slate-800 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-    type="button"
+  class="border-b border-black py-6 px-6 text-center text-sm transition-all shadow-sm hover:shadow-lg text-black hover:text-white hover:bg-black hover:border-b-black focus:text-white focus:bg-black focus:border-b-black active:border-b-black active:text-white active:bg-black disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+  type="button"
   >
     VIEW OUR SERVICES
   </button>

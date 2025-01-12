@@ -15,11 +15,13 @@ function Portfolio() {
           of the events we design, ensuring no two weddings will ever look the
           same.
         </p>
-        <a
-          href="#work"
-          className="inline-block text-black font-semibold border-b border-black pb-1 hover:text-blue-600 hover:border-blue-600 transition"
-        >
+        <a>
+          <button
+            class="border-b border-black py-6 px-6 text-center text-sm transition-all shadow-sm hover:shadow-lg text-black hover:text-white hover:bg-black hover:border-b-black focus:text-white focus:bg-black focus:border-b-black active:border-b-black active:text-white active:bg-black disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+            type="button"
+          >
           VIEW OUR WORK
+        </button>
         </a>
       </div>
 
