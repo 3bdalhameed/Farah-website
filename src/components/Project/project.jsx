@@ -1,61 +1,128 @@
-import React from "react";
-import galaxy from "../../pages/newenglish/img/21.jpg";
+import React, { useState, useEffect } from "react";
+import logo from "../../pages/newimg/logo1.png";
+import { useNavigate } from "react-router-dom";
 
-function Project() {
+const NavBar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for small screen menu toggle
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <section
-      id="projects"
-      className="relative bg-white py-24 flex flex-col items-center justify-center">
-      {/* Overlay Text */}
-      <div className="w-11/12 md:w-3/5 text-center bg-white p-8 font-serif text-gray-800 text-lg leading-relaxed shadow-md mb-12">
-        <p>
-          FROM THE BOTTOM OF OUR HEARTS THANK YOU FOR
-          <br />
-          CREATING THE WEDDING OF OUR DREAMS AND MAKING IT
-          <br />
-          SUCH A MEMORABLE DAY FOR US.
-        </p>
-        <strong className="block mt-4 text-xl font-bold">DEMI & MARKO</strong>
+    <>
+      {/* Navbar */}
+      <nav
+        className={`fixed top-0 left-0 w-full flex items-center justify-between px-6 md:px-24 py-4 md:py-6 transition-all duration-500 z-50 ${
+          isScrolled ? "bg-black shadow-lg" : "bg-transparent"
+        }`}
+      >
+        {/* Hamburger Menu (Small Screens) */}
+        <div className="md:hidden">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-white text-2xl focus:outline-none"
+          >
+            {isMenuOpen ? "✖" : "☰"}
+          </button>
+        </div>
+
+        {/* Left Navigation */}
+        <div className="hidden md:flex gap-8 text-white">
+          <a href="#home" className="hover:text-gray-400 transition">
+            Home
+          </a>
+          <a href="#about" className="hover:text-gray-400 transition">
+            About
+          </a>
+          <a href="#services" className="hover:text-gray-400 transition">
+            Services
+          </a>
+        </div>
+
+        {/* Right Navigation */}
+        <div className="hidden md:flex gap-8 text-white">
+          <a href="#gallery" className="hover:text-gray-400 transition">
+            Gallery
+          </a>
+          <a href="#testimonials" className="hover:text-gray-400 transition">
+            Testimonials
+          </a>
+          <a href="#appointment" className="hover:text-gray-400 transition">
+            Book
+          </a>
+        </div>
+      </nav>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="fixed inset-0 bg-black text-white flex flex-col items-center py-4 z-50 overflow-y-auto">
+          <a
+            href="#home"
+            className="py-2 hover:text-gray-400 transition"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Home
+          </a>
+          <a
+            href="#about"
+            className="py-2 hover:text-gray-400 transition"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            About
+          </a>
+          <a
+            href="#services"
+            className="py-2 hover:text-gray-400 transition"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Services
+          </a>
+          <a
+            href="#gallery"
+            className="py-2 hover:text-gray-400 transition"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Gallery
+          </a>
+          <a
+            href="#testimonials"
+            className="py-2 hover:text-gray-400 transition"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Testimonials
+          </a>
+          <a
+            href="#appointment"
+            className="py-2 hover:text-gray-400 transition"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Book
+          </a>
+        </div>
+      )}
+
+      {/* Logo */}
+      <div
+        className={`fixed transition-all duration-500 transform z-40 ${
+          isScrolled
+            ? "top-4 left-1/2 -translate-x-1/2 w-28" // Small logo size
+            : "top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-1/2" // Large centered logo
+        }`}
+      >
+        <img src={logo} alt="Logo" className="w-full h-auto" />
       </div>
-
-      <div className="flex flex-col lg:flex-row items-center justify-center w-full max-w-6xl">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0 top-80">
-        <img
-          src={galaxy}
-          alt="Wedding Event"
-          className="w-4/6 h-full object-cover opacity-80 top-20"
-        />
-      </div>
-
-<div className="w-full flex-1 bg-gray-100 p-24 top-10 left-96 text-center shadow-lg max-w-4xl lg:ml-auto lg:mr-0 mx-auto lg:mt-0 lg:mb-0 lg:relative lg:right-0">
-  <h2 className="font-serif text-2xl lg:text-3xl font-bold text-gray-800 mb-6 leading-snug">
-    CREATORS OF EXCEPTIONAL EVENTS
-  </h2>
-  <p className="text-base text-gray-600 mb-6 leading-relaxed">
-    White Events is a creative event design and management studio, based in Perth and available for weddings and events throughout Western Australia.
-  </p>
-  <p className="text-base text-gray-600 mb-6 leading-relaxed">
-    Established in 2005, White Events has earned a reputation as Western Australia's leading wedding planning studio, led by industry expert,{" "}
-    <a href="#" className="text-blue-600 underline">
-      Lara White
-    </a>
-    .
-  </p>
-  <a href="#buttons-with-link">
-  <button
-  class="border-b border-black py-6 px-6 text-center text-sm transition-all shadow-sm hover:shadow-lg text-black hover:text-white hover:bg-black hover:border-b-black focus:text-white focus:bg-black focus:border-b-black active:border-b-black active:text-white active:bg-black disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
-  type="button"
-  >
-    VIEW OUR SERVICES
-  </button>
-</a>
-</div>
-
-
-      </div>
-    </section>
+    </>
   );
-}
+};
 
-export default Project;
+export default NavBar;
