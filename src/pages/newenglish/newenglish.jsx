@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "../../components/Navbar/navbar";
-import "./newenglish.css";
+import Navbar from "../../components/Navbargallery/navbar";
 import m1 from "./img/1.jpg";
 import m2 from "./img/2.jpg";
 import m3 from "./img/3.jpg";
@@ -30,7 +29,7 @@ import m25 from "./img/25.jpg";
 function ImageGallery() {
   const images = [
     m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13, m14, m15, m16, m17, m18, m19, m20,
-    m21, m22, m23, m24, m25
+    m21, m22, m23, m24, m25,
   ];
 
   const [modalImageIndex, setModalImageIndex] = useState(null);
@@ -58,35 +57,71 @@ function ImageGallery() {
       <header>
         <Navbar />
       </header>
-      <div className="jumbotron">
-        <h1>
-          <i className="fa fa-camera-retro"></i> make your widding unforgettable
-        </h1>
-        <p>Just a Gallery Full of Beautiful Images...</p>
-      </div>
-      <div>
-        <div className="image-gallery">
-          {images.map((src, index) => (
-            <div key={index} className="image-item" onClick={() => openModal(index)}>
-              <img src={src} alt={`Gallery ${index + 1}`} />
-            </div>
-          ))}
-        </div>
 
-        {modalImageIndex !== null && (
-          <div className="modal" onClick={closeModal}>
-            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-              <button className="modal-button prev" onClick={goToPrevious}>
-                &#8249;
-              </button>
-              <img src={images[modalImageIndex]} alt="Enlarged" />
-              <button className="modal-button next" onClick={goToNext}>
-                &#8250;
-              </button>
-            </div>
-          </div>
-        )}
+      {/* Jumbotron */}
+      <div className="text-center bg-white/80 border border-gray-200 shadow-md rounded-lg mt-14 p-12 max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold text-gray-800 mb-4">
+          <i className="fa fa-camera-retro"></i> Make Your Wedding Unforgettable
+        </h1>
+        <p className="text-lg text-gray-600">
+          Just a Gallery Full of Beautiful Images...
+        </p>
       </div>
+
+      {/* Image Gallery */}
+      <div
+        className="masonry-grid p-6 bg-gray-100 rounded-lg px-60"
+        style={{
+          columnCount: 4,
+          columnGap: "16px",
+        }}
+      >
+        {images.map((src, index) => (
+          <div
+            key={index}
+            className="relative mb-4 overflow-hidden rounded-lg shadow-md cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+            onClick={() => openModal(index)}
+            style={{ breakInside: "avoid" }}
+          >
+            <img
+              src={src}
+              alt={`Gallery ${index + 1}`}
+              className="w-full h-auto object-cover"
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* Modal */}
+      {modalImageIndex !== null && (
+        <div
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+          onClick={closeModal}
+        >
+          <div
+            className="relative flex items-center justify-center max-w-full max-h-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80 text-gray-800 text-2xl font-bold rounded-full shadow-md p-4 hover:bg-white z-50"
+              onClick={goToPrevious}
+            >
+              &#8249;
+            </button>
+            <img
+              src={images[modalImageIndex]}
+              alt="Enlarged"
+              className="max-w-[90%] max-h-[90%] rounded-lg shadow-lg"
+            />
+            <button
+              className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80 text-gray-800 text-2xl font-bold rounded-full shadow-md p-4 hover:bg-white z-50"
+              onClick={goToNext}
+            >
+              &#8250;
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }

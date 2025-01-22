@@ -65,7 +65,7 @@ const NavBar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute top-14 left-0 w-full bg-black text-white flex flex-col items-center py-4 z-[60] md:hidden">
+        <div className="absolute top-14 left-0 w-full bg-black text-white flex flex-col items-center py-4 z-40 md:hidden">
           <a
             href="#home"
             className="py-2 hover:text-gray-400 transition"
