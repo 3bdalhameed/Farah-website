@@ -22,7 +22,7 @@ const NavBar = () => {
     <>
       {/* Navbar */}
       <nav
-        className={`fixed top-0 left-0 w-full flex items-center justify-between px-6 md:px-24 py-4 md:py-6 transition-all duration-500 z-50 ${
+        className={`fixed top-0 left-0 w-full flex items-center justify-between px-12 md:px-24 py-4 md:py-6 transition-all duration-500 z-50 ${
           isScrolled ? "bg-black shadow-lg" : "bg-transparent"
         }`}
       >
@@ -37,24 +37,24 @@ const NavBar = () => {
         </div>
 
         {/* Left Navigation */}
-        <div className="hidden md:flex gap-8 text-white">
-          <a href="#home" className="hover:text-gray-400 transition">
+        <div className="hidden md:flex gap-8 text-white pl-36">
+          <a href="/" className="hover:text-gray-400 transition">
             Home
           </a>
-          <a href="#about" className="hover:text-gray-400 transition">
+          <a href="/about" className="hover:text-gray-400 transition">
             About
           </a>
-          <a href="#services" className="hover:text-gray-400 transition">
+          <a href="/services" className="hover:text-gray-400 transition">
             Services
           </a>
         </div>
 
         {/* Right Navigation */}
-        <div className="hidden md:flex gap-8 text-white">
-          <a href="#gallery" className="hover:text-gray-400 transition">
+        <div className="hidden md:flex gap-8 text-white pr-36">
+          <a href="/gallery" className="hover:text-gray-400 transition">
             Gallery
           </a>
-          <a href="#testimonials" className="hover:text-gray-400 transition">
+          <a href="/testimonials" className="hover:text-gray-400 transition">
             Testimonials
           </a>
           <a href="#appointment" className="hover:text-gray-400 transition">

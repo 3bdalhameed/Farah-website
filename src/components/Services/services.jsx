@@ -4,14 +4,14 @@ import m1 from "../../pages/newenglish/img/15.jpg";
 
 function Services() {
   return (
-    <section className="py-16 bg-white flex justify-center items-center">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
+    <section className="py-8 bg-white flex justify-center items-center">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto items-center px-2">
         {/* Left Image */}
         <div className="w-full">
           <img
             src={m1} /* Replace with actual left image URL */
             alt="Bride and Groom Holding Hands"
-            className="w-full h-auto rounded-lg object-cover"
+            className="w-full h-auto object-cover"
           />
         </div>
 
@@ -50,7 +50,7 @@ function Services() {
           <img
             src={m1}
             alt="Elegant Wedding Table Setup"
-            className="w-full h-auto rounded-lg object-cover"
+            className="w-full h-auto object-cover"
           />
         </div>
       </div>

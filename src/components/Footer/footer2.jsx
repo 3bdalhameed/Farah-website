@@ -8,32 +8,6 @@ import G4 from '../../pages/newimg/G4.png';
 function Social() {
   return (
     <>
-      {/* Top Section: Gallery */}
-      <section className="flex flex-wrap justify-center gap-6 py-8 bg-black">
-        {[
-          { src: G1, link: "https://www.instagram.com/reel/DB9X-k4NXlE/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-          { src: G2, link: "https://www.instagram.com/reel/DC__2a7tg1F/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-          { src: G3, link: "https://www.instagram.com/reel/DCo6xtDNamY/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-          { src: G4, link: "https://www.instagram.com/reel/DCUN3vdtbiB/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
-        ].map((gallery, index) => (
-          <div
-            key={index}
-            className="relative w-48 h-64 overflow-hidden rounded-md shadow-lg hover:scale-105 transition-transform"
-          >
-            <a href={gallery.link} target="_blank" rel="noopener noreferrer">
-              <img
-                src={gallery.src}
-                alt={`Gallery ${index + 1}`}
-                className="w-full h-full object-cover"
-              />
-              <span className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center text-white text-4xl opacity-0 hover:opacity-100 transition-opacity">
-                &#9654;
-              </span>
-            </a>
-          </div>
-        ))}
-      </section>
-
       {/* Footer Section */}
       <footer className="bg-black text-white text-sm">
         {/* Middle Content */}

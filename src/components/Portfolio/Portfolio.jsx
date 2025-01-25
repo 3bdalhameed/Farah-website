@@ -3,7 +3,7 @@ import m1 from "../../pages/newenglish/img/15.jpg";
 
 function Portfolio() {
   return (
-    <section className="text-center py-24 bg-white" id="portfolio">
+    <section className="text-center py-44 bg-white" id="portfolio">
       {/* Portfolio Header */}
       <div className="mb-12">
         <h2 className="text-4xl font-serif font-bold mb-4 text-gray-800">
