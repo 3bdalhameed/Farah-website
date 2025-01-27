@@ -7,12 +7,15 @@ import Services from "../components/Services/services";
 import Feadback from "../components/Feedback/feedback";
 import Appointment from "../components/Appointment/appointment";
 import Footer from "../components/Footer/footer";
+import { Analytics } from "@vercel/analytics/react";
+
 
 
 function Home() {
 
   return (
       <header>
+        <Analytics/>
         <Navbar />
         <Main />
         <Project />
