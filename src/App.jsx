@@ -1,5 +1,6 @@
 // src/App.js
 import React from "react";
+import { Analytics } from "@vercel/analytics/react"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import MyTest from "./pages/mytest";
 import Galary from "./pages/newenglish/newenglish";
@@ -13,9 +14,9 @@ function App() {
         <Router>
             <div>
                 <Routes>
-                    <Route path="/gallery" element={<Galary />} />
+                    <Analytics />
                     <Route path="/" element={<MyTest />} />
-                    
+                    <Route path="/gallery" element={<Galary />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/services" element={<Service />} />
                 </Routes>
