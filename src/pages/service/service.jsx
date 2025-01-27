@@ -17,7 +17,7 @@ const PlanStyleManageSection = () => {
           When you just want to leave it up to the experts, our full-service planning allows you to do exactly that. 
           From initial brief through to final creation, we simply take care of everything.
         </p>
-        <button className="px-8 py-3 bg-white text-black border-b border-black hover:bg-black hover:text-white transition duration-300">
+        <button className="px-8 py-3 text-black border-b border-black hover:bg-black hover:text-white transition duration-300">
           Learn More</button>
       </div>
       <div className="w-full md:w-2/6 flex justify-center">
@@ -94,48 +94,57 @@ const StyleSection = () => {
 const WeddingServicesPage = () => {
   return (
     <>
-    <Navbar />
-    <section
-      id="about"
-      className="relative h-screen bg-cover bg-center flex items-center justify-center"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
-      <div className="absolute inset-0 bg-black opacity-75"></div>
+      <Navbar />
+      <section
+        id="about"
+        className="relative h-screen bg-cover bg-center flex items-center justify-center"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      >
+        <div className="absolute inset-0 bg-black opacity-75"></div>
+  
+        <div className="relative z-10 text-center text-white max-w-2xl px-6">
+          <h1 className="text-5xl font-serif font-bold mb-6">Who We Are</h1>
+          <p className="text-lg leading-relaxed">
+            White Events is a premier event design and planning studio dedicated
+            to creating unforgettable moments. Based in Perth, we specialize in
+            designing events that are as unique as our clients, blending creativity
+            and precision to make your dreams come true.
+          </p>
+        </div>
+      </section>
+      <div className="relative">
+        {/* Gray background on the left for the first half */}
+        <div className="absolute bottom-0 left-0 w-[25%] h-1/2 bg-gray-200 z-0"></div>
 
-      <div className="relative z-10 text-center text-white max-w-2xl px-6">
-        <h1 className="text-5xl font-serif font-bold mb-6">Who We Are</h1>
-        <p className="text-lg leading-relaxed">
-          White Events is a premier event design and planning studio dedicated
-          to creating unforgettable moments. Based in Perth, we specialize in
-          designing events that are as unique as our clients, blending creativity
-          and precision to make your dreams come true.
-        </p>
+        {/* Gray background on the right for the second half */}
+        <div className="absolute top-0 right-0 w-[25%] h-1/2 bg-gray-200 z-0"></div>
+
+        {/* Main content */}
+        <div className="relative  max-w-screen-xl mx-auto flex flex-col items-center justify-center z-10">
+          <PlanStyleManageSection />
+          <ServiceSection
+            title="Style & Manage"
+            subtitle="For a beautiful wedding that flows seamlessly"
+            description="For a flawlessly styled wedding and a day that runs seamlessly, our wedding styling & management service can be designed to suit the varying needs of each and every couple. This service allows you to be a little hands-on with your wedding plans, while we take care of all the finer details, to create the perfect look and feel for your wedding day. Then, as the big day draws closer, we'll manage every element, ensuring that no detail is overlooked, that each supplier is properly confirmed, and of course, that the day itself flows effortlessly from start to finish."
+            leftImage={true}
+            leftImageUrl="/path-to-left-image.jpg"
+            rightImageUrl="/path-to-right-image.jpg"
+          />
+          <StyleSection />
+          <PlanStyleManageSection />
+          <ServiceSection
+            title="Style & Manage"
+            subtitle="For a beautiful wedding that flows seamlessly"
+            description="For a flawlessly styled wedding and a day that runs seamlessly, our wedding styling & management service can be designed to suit the varying needs of each and every couple. This service allows you to be a little hands-on with your wedding plans, while we take care of all the finer details, to create the perfect look and feel for your wedding day. Then, as the big day draws closer, we'll manage every element, ensuring that no detail is overlooked, that each supplier is properly confirmed, and of course, that the day itself flows effortlessly from start to finish."
+            leftImage={true}
+            leftImageUrl="/path-to-left-image.jpg"
+            rightImageUrl="/path-to-right-image.jpg"
+          />
+        </div>
       </div>
-    </section>
-    <div className="p-16">
-      <PlanStyleManageSection />
-      <ServiceSection
-        title="Style & Manage"
-        subtitle="For a beautiful wedding that flows seamlessly"
-        description="For a flawlessly styled wedding and a day that runs seamlessly, our wedding styling & management service can be designed to suit the varying needs of each and every couple. This service allows you to be a little hands-on with your wedding plans, while we take care of all the finer details, to create the perfect look and feel for your wedding day. Then, as the big day draws closer, we'll manage every element, ensuring that no detail is overlooked, that each supplier is properly confirmed, and of course, that the day itself flows effortlessly from start to finish."
-        leftImage={true}
-        leftImageUrl="/path-to-left-image.jpg"
-        rightImageUrl="/path-to-right-image.jpg"
-      />
-      <StyleSection />
-      <PlanStyleManageSection />
-      <ServiceSection
-        title="Style & Manage"
-        subtitle="For a beautiful wedding that flows seamlessly"
-        description="For a flawlessly styled wedding and a day that runs seamlessly, our wedding styling & management service can be designed to suit the varying needs of each and every couple. This service allows you to be a little hands-on with your wedding plans, while we take care of all the finer details, to create the perfect look and feel for your wedding day. Then, as the big day draws closer, we'll manage every element, ensuring that no detail is overlooked, that each supplier is properly confirmed, and of course, that the day itself flows effortlessly from start to finish."
-        leftImage={true}
-        leftImageUrl="/path-to-left-image.jpg"
-        rightImageUrl="/path-to-right-image.jpg"
-      />
-    </div>
-    <Footer />
+      <Footer />
     </>
-  );
+  );  
 };
 
 export default WeddingServicesPage;

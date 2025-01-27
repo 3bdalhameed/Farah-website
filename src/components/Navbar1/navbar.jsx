@@ -65,45 +65,45 @@ const NavBar = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="absolute top-14 left-0 w-full bg-black text-white flex flex-col items-center py-4 z-40 md:hidden">
+        <div className="fixed inset-0 bg-black bg-opacity-90 text-white flex flex-col items-center justify-center z-40">
           <a
             href="/"
-            className="py-2 hover:text-gray-400 transition"
+            className="py-4 text-xl hover:text-gray-400 transition"
             onClick={() => setIsMenuOpen(false)}
           >
             Home
           </a>
           <a
             href="/about"
-            className="py-2 hover:text-gray-400 transition"
+            className="py-4 text-xl hover:text-gray-400 transition"
             onClick={() => setIsMenuOpen(false)}
           >
             About
           </a>
           <a
             href="/services"
-            className="py-2 hover:text-gray-400 transition"
+            className="py-4 text-xl hover:text-gray-400 transition"
             onClick={() => setIsMenuOpen(false)}
           >
             Services
           </a>
           <a
-            href="#gallery"
-            className="py-2 hover:text-gray-400 transition"
+            href="/gallery"
+            className="py-4 text-xl hover:text-gray-400 transition"
             onClick={() => setIsMenuOpen(false)}
           >
             Gallery
           </a>
           <a
-            href="#testimonials"
-            className="py-2 hover:text-gray-400 transition"
+            href="/testimonials"
+            className="py-4 text-xl hover:text-gray-400 transition"
             onClick={() => setIsMenuOpen(false)}
           >
             Testimonials
           </a>
           <a
             href="#appointment"
-            className="py-2 hover:text-gray-400 transition"
+            className="py-4 text-xl hover:text-gray-400 transition"
             onClick={() => setIsMenuOpen(false)}
           >
             Book
