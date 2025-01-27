@@ -17,7 +17,8 @@ const PlanStyleManageSection = () => {
           When you just want to leave it up to the experts, our full-service planning allows you to do exactly that. 
           From initial brief through to final creation, we simply take care of everything.
         </p>
-        <button className="px-8 py-3 bg-gray-800 text-white rounded-lg shadow-md hover:bg-gray-700 transition duration-300">Learn More</button>
+        <button className="px-8 py-3 bg-white text-black border-b border-black hover:bg-black hover:text-white transition duration-300">
+          Learn More</button>
       </div>
       <div className="w-full md:w-2/6 flex justify-center">
         <img
@@ -47,7 +48,7 @@ const ServiceSection = ({ title, subtitle, description, leftImage, rightImageUrl
         <h2 className="text-4xl font-bold my-4 text-gray-800">{title}</h2>
         <h3 className="text-2xl italic text-gray-500 mb-4">{subtitle}</h3>
         <p className="text-base text-gray-600 mb-6 leading-relaxed">{description}</p>
-        <button className="px-8 py-3 bg-gray-800 text-white rounded-lg shadow-md hover:bg-gray-700 transition duration-300">
+        <button className="px-8 py-3 bg-white text-black border-b border-black hover:bg-black hover:text-white transition duration-300">
           Learn More
         </button>
       </div>
@@ -82,7 +83,7 @@ const StyleSection = () => {
         <p className="text-base text-gray-600 mb-6 leading-relaxed">
           Our design service focuses on the aesthetics to create cohesive, detail-oriented wedding designs, that flow from invitation to reception and everything in between.
         </p>
-        <button className="px-8 py-3 bg-gray-800 text-white rounded-lg shadow-md hover:bg-gray-700 transition duration-300">
+        <button className="px-8 py-3 bg-white border-b border-black text-black hover:bg-black hover:text-white transition duration-300">
           Learn More
         </button>
       </div>
