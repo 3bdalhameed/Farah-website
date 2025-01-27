@@ -67,21 +67,21 @@ const NavBar = () => {
       {isMenuOpen && (
         <div className="absolute top-14 left-0 w-full bg-black text-white flex flex-col items-center py-4 z-40 md:hidden">
           <a
-            href="#home"
+            href="/"
             className="py-2 hover:text-gray-400 transition"
             onClick={() => setIsMenuOpen(false)}
           >
             Home
           </a>
           <a
-            href="#about"
+            href="/about"
             className="py-2 hover:text-gray-400 transition"
             onClick={() => setIsMenuOpen(false)}
           >
             About
           </a>
           <a
-            href="#services"
+            href="/services"
             className="py-2 hover:text-gray-400 transition"
             onClick={() => setIsMenuOpen(false)}
           >

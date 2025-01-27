@@ -34,12 +34,12 @@ function Social() {
         ))}
       </section>
 
-      {/* Footer Section */}
-      <footer className="bg-black text-white text-sm">
+{/* Footer Section */}
+<footer className="bg-black text-white text-sm">
         {/* Middle Content */}
-        <div className="flex flex-wrap justify-between items-center gap-8 py-8 px-4">
+        <div className="flex flex-col lg:flex-row justify-between items-center gap-8 py-8 px-4">
           {/* Contact Details */}
-          <div className="flex-1 text-center md:text-left px-64 md:px-64">
+          <div className="flex-1 text-center lg:text-left px-4 lg:px-8">
             <h3 className="text-lg font-semibold mb-4">CONTACT DETAILS</h3>
             <p>1st Floor, 142 Northwood St, West Leederville</p>
             <p>(by appointment)</p>
@@ -52,14 +52,13 @@ function Social() {
             <p>0414 184 341</p>
           </div>
 
-
           {/* Logo */}
           <div className="flex-1 flex justify-center">
-            <img src={logo} alt="Logo" className="w-40" />
+            <img src={logo} alt="Logo" className="w-32 sm:w-40" />
           </div>
 
           {/* Footer Menu */}
-          <div className="flex-1 text-center md:text-right px-64 md:px-64">
+          <div className="flex-1 text-center lg:text-right px-4 lg:px-8">
             <h3 className="text-lg font-semibold mb-4">MENU</h3>
             <ul className="space-y-2">
               {["HOME", "ABOUT", "SERVICES", "GALLERY", "TESTIMONIALS", "CONTACT"].map((menu, index) => (
