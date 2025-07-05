@@ -16,20 +16,10 @@ import m13 from "./img/13.jpg";
 import m14 from "./img/14.jpg";
 import m15 from "./img/15.jpg";
 import m16 from "./img/16.jpg";
-import m17 from "./img/17.jpg";
-import m18 from "./img/18.jpg";
-import m19 from "./img/19.jpg";
-import m20 from "./img/20.jpg";
-import m21 from "./img/21.jpg";
-import m22 from "./img/22.jpg";
-import m23 from "./img/23.jpg";
-import m24 from "./img/24.jpg";
-import m25 from "./img/25.jpg";
 
 function ImageGallery() {
   const images = [
-    m1, m22, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13, m14, m15, m16, m17, m18, m19, m20,
-    m21, m22, m23, m24, m25,
+    m1, m22, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13, m14, m15, m16,
   ];
 
   const [modalImageIndex, setModalImageIndex] = useState(null);
