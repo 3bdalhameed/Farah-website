@@ -1,5 +1,5 @@
 import React from "react";
-import galaxy from "../../pages/newenglish/img/21.jpg";
+import galaxy from "../../pages/newenglish/img/16.jpg";
 
 function Project() {
   return (
