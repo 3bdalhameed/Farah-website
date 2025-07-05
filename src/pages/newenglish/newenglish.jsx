@@ -19,7 +19,7 @@ import m16 from "./img/16.jpg";
 
 function ImageGallery() {
   const images = [
-    m1, m22, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13, m14, m15, m16,
+    m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12, m13, m14, m15, m16,
   ];
 
   const [modalImageIndex, setModalImageIndex] = useState(null);
